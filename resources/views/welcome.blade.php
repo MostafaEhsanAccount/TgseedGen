@@ -14,22 +14,23 @@
                 </div>
                 <div class="card card-md">
                     <div class="card-body text-center">
-                        <h2 class="mb-3">تأسيس المشروع</h2>
+                        <h2 class="mb-3">نظام توليد العملاء المحتملين والتواصل</h2>
                         <p class="text-secondary mb-4">
-                            Laravel 13 + Tabler (Bootstrap 5, دعم RTL مدمج) شغالين مع بعض بنجاح.
+                            Laravel {{ app()->version() }} + Tabler (Bootstrap 5، دعم RTL مدمج)
                         </p>
-                        <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
-                            <span class="badge bg-green-lt">Laravel {{ app()->version() }}</span>
-                            <span class="badge bg-purple-lt">Tabler UI</span>
-                            <span class="badge bg-blue-lt">RTL</span>
-                        </div>
-                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="tooltip" title="مكونات Bootstrap JS شغالة فعليًا">
-                            اختبار زر Tabler
-                        </button>
+                        @if (Route::has('login'))
+                            <div class="d-flex align-items-center justify-content-center gap-2">
+                                @auth
+                                    <a href="{{ route('dashboard') }}" class="btn btn-primary">لوحة التحكم</a>
+                                @else
+                                    <a href="{{ route('login') }}" class="btn btn-primary">تسجيل الدخول</a>
+                                    @if (Route::has('register'))
+                                        <a href="{{ route('register') }}" class="btn btn-outline-secondary">إنشاء حساب</a>
+                                    @endif
+                                @endauth
+                            </div>
+                        @endif
                     </div>
-                </div>
-                <div class="text-center text-secondary mt-3">
-                    الخطوة الجاية: تثبيت Laravel Breeze وربط شاشات الدخول بنفس القالب.
                 </div>
             </div>
         </div>

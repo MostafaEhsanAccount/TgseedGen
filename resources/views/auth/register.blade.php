@@ -1,0 +1,45 @@
+<x-guest-layout>
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
+
+        <div class="mb-3">
+            <x-input-label for="company" value="اسم الشركة" />
+            <x-text-input id="company" type="text" name="company" :value="old('company')" required autofocus />
+            <x-input-error :messages="$errors->get('company')" />
+        </div>
+
+        <div class="mb-3">
+            <x-input-label for="name" :value="__('Name')" />
+            <x-text-input id="name" type="text" name="name" :value="old('name')" required autocomplete="name" />
+            <x-input-error :messages="$errors->get('name')" />
+        </div>
+
+        <div class="mb-3">
+            <x-input-label for="email" :value="__('Email')" />
+            <x-text-input id="email" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            <x-input-error :messages="$errors->get('email')" />
+        </div>
+
+        <div class="mb-3">
+            <x-input-label for="password" :value="__('Password')" />
+            <x-text-input id="password" type="password" name="password" required autocomplete="new-password" />
+            <x-input-error :messages="$errors->get('password')" />
+        </div>
+
+        <div class="mb-3">
+            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+            <x-text-input id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" />
+            <x-input-error :messages="$errors->get('password_confirmation')" />
+        </div>
+
+        <div class="d-flex align-items-center justify-content-between">
+            <a class="text-secondary" href="{{ route('login') }}">
+                {{ __('Already registered?') }}
+            </a>
+
+            <x-primary-button>
+                {{ __('Register') }}
+            </x-primary-button>
+        </div>
+    </form>
+</x-guest-layout>
