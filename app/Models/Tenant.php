@@ -2,13 +2,16 @@
 
 namespace App\Models;
 
+use App\Observers\TenantObserver;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 #[Fillable(['name', 'slug', 'owner_user_id', 'is_active'])]
+#[ObservedBy(TenantObserver::class)]
 class Tenant extends Model
 {
     use HasFactory;
@@ -21,6 +24,11 @@ class Tenant extends Model
     public function owner(): BelongsTo
     {
         return $this->belongsTo(User::class, 'owner_user_id');
+    }
+
+    public function pipelineStages(): HasMany
+    {
+        return $this->hasMany(PipelineStage::class);
     }
 
     /**

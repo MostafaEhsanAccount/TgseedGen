@@ -1,0 +1,58 @@
+<?php
+
+return [
+    'title' => 'العملاء المحتملون',
+    'board' => 'لوحة المتابعة',
+    'kanban_board' => 'لوحة Kanban',
+    'table_view' => 'عرض الجدول',
+    'new_lead' => '+ عميل جديد',
+    'edit_lead' => 'تعديل بيانات العميل',
+
+    'search_placeholder' => 'بحث بالاسم/الشركة/الهاتف/الإيميل',
+    'all_stages' => 'كل المراحل',
+    'all_tags' => 'كل التصنيفات',
+    'all_assignees' => 'كل المسؤولين',
+
+    'name' => 'الاسم',
+    'company' => 'الشركة',
+    'phone' => 'الهاتف',
+    'email' => 'الإيميل',
+    'website' => 'الموقع الإلكتروني',
+    'industry' => 'النشاط التجاري',
+    'city' => 'المدينة',
+    'country' => 'الدولة',
+    'address' => 'العنوان',
+    'stage' => 'المرحلة',
+    'assignee' => 'المسؤول',
+    'unassigned' => '— غير مسند —',
+    'tags' => 'التصنيفات',
+    'notes' => 'ملاحظة سريعة',
+
+    'no_matching_leads' => 'لا يوجد عملاء مطابقين',
+    'save' => 'حفظ',
+    'save_changes' => 'حفظ التعديلات',
+    'cancel' => 'إلغاء',
+    'edit' => 'تعديل',
+    'delete' => 'حذف',
+    'confirm_delete' => 'تأكيد حذف هذا العميل؟',
+
+    'lead_details' => 'بيانات العميل',
+    'reminders' => 'التذكيرات',
+    'no_reminders' => 'لا توجد تذكيرات',
+    'mark_done' => 'تم',
+    'add_reminder' => 'إضافة تذكير',
+    'reminder_note_placeholder' => 'نص التذكير',
+
+    'timeline' => 'الجدول الزمني',
+    'add_note_placeholder' => 'أضف ملاحظة...',
+    'add' => 'إضافة',
+    'no_activity_yet' => 'لا يوجد نشاط بعد',
+    'system' => 'النظام',
+
+    'lead_created' => 'تم إضافة العميل بنجاح',
+    'lead_updated' => 'تم تحديث بيانات العميل',
+    'lead_deleted' => 'تم حذف العميل',
+    'note_added' => 'تمت إضافة الملاحظة',
+    'reminder_added' => 'تمت إضافة التذكير',
+    'reminder_marked_done' => 'تم تحديد التذكير كمنتهي',
+];

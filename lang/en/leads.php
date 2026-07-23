@@ -1,0 +1,58 @@
+<?php
+
+return [
+    'title' => 'Leads',
+    'board' => 'Pipeline Board',
+    'kanban_board' => 'Kanban Board',
+    'table_view' => 'Table View',
+    'new_lead' => '+ New Lead',
+    'edit_lead' => 'Edit Lead',
+
+    'search_placeholder' => 'Search by name / company / phone / email',
+    'all_stages' => 'All Stages',
+    'all_tags' => 'All Tags',
+    'all_assignees' => 'All Assignees',
+
+    'name' => 'Name',
+    'company' => 'Company',
+    'phone' => 'Phone',
+    'email' => 'Email',
+    'website' => 'Website',
+    'industry' => 'Industry',
+    'city' => 'City',
+    'country' => 'Country',
+    'address' => 'Address',
+    'stage' => 'Stage',
+    'assignee' => 'Assignee',
+    'unassigned' => '— Unassigned —',
+    'tags' => 'Tags',
+    'notes' => 'Quick note',
+
+    'no_matching_leads' => 'No matching leads',
+    'save' => 'Save',
+    'save_changes' => 'Save Changes',
+    'cancel' => 'Cancel',
+    'edit' => 'Edit',
+    'delete' => 'Delete',
+    'confirm_delete' => 'Are you sure you want to delete this lead?',
+
+    'lead_details' => 'Lead Details',
+    'reminders' => 'Reminders',
+    'no_reminders' => 'No reminders',
+    'mark_done' => 'Done',
+    'add_reminder' => 'Add Reminder',
+    'reminder_note_placeholder' => 'Reminder note',
+
+    'timeline' => 'Timeline',
+    'add_note_placeholder' => 'Add a note...',
+    'add' => 'Add',
+    'no_activity_yet' => 'No activity yet',
+    'system' => 'System',
+
+    'lead_created' => 'Lead added successfully',
+    'lead_updated' => 'Lead updated',
+    'lead_deleted' => 'Lead deleted',
+    'note_added' => 'Note added',
+    'reminder_added' => 'Reminder added',
+    'reminder_marked_done' => 'Reminder marked as done',
+];
