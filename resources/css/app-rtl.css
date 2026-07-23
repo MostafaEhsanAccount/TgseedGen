@@ -1,4 +1,4 @@
-@import '@tabler/core/dist/css/tabler.css';
+@import '@tabler/core/dist/css/tabler.rtl.css';
 
 :root {
     --tblr-primary: #4f46e5;

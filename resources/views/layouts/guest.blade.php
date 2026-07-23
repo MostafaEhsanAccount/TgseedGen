@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
 
         <title>{{ config('app.name', 'TgseedGen') }}</title>
 
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite([app()->getLocale() === 'ar' ? 'resources/css/app-rtl.css' : 'resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="d-flex flex-column">
         <div class="page page-center">
