@@ -5,9 +5,16 @@
         </h2>
     </x-slot>
 
-    <div class="card">
-        <div class="card-body">
-            {{ __("You're logged in!") }}
+    <div class="row row-deck row-cards">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    {{ __("You're logged in!") }}
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <livewire:live-counter />
         </div>
     </div>
 </x-app-layout>
