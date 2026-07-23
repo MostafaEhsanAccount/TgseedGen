@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LeadActivityController;
 use App\Http\Controllers\LeadController;
+use App\Http\Controllers\LeadExportController;
+use App\Http\Controllers\LeadImportController;
 use App\Http\Controllers\LeadReminderController;
 use App\Http\Controllers\MarketingController;
 use App\Http\Controllers\ProfileController;
@@ -31,6 +33,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/leads/board', [LeadController::class, 'board'])->name('leads.board');
+    Route::get('/leads/export', [LeadExportController::class, 'export'])->name('leads.export');
+    Route::get('/leads/import', [LeadImportController::class, 'create'])->name('leads.import.create');
+    Route::post('/leads/import/preview', [LeadImportController::class, 'preview'])->name('leads.import.preview');
+    Route::post('/leads/import', [LeadImportController::class, 'store'])->name('leads.import.store');
+    Route::get('/leads/import/{batch}', [LeadImportController::class, 'show'])->name('leads.import.show');
     Route::post('/leads/{lead}/notes', [LeadActivityController::class, 'store'])->name('leads.notes.store');
     Route::post('/leads/{lead}/reminders', [LeadReminderController::class, 'store'])->name('leads.reminders.store');
     Route::patch('/reminders/{reminder}/done', [LeadReminderController::class, 'markDone'])->name('reminders.markDone');

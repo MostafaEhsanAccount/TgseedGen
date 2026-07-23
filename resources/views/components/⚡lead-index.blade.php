@@ -89,6 +89,15 @@ new class extends Component
         </div>
     </div>
 
+    <div class="row g-2 mb-3 justify-content-end">
+        <div class="col-auto">
+            <a href="{{ route('leads.export', ['search' => $search, 'stage' => $stage, 'tag' => $tag, 'assignee' => $assignee]) }}" class="btn btn-outline-secondary">{{ __('leads.export') }}</a>
+        </div>
+        <div class="col-auto">
+            <a href="{{ route('leads.import.create') }}" class="btn btn-outline-secondary">{{ __('leads.import') }}</a>
+        </div>
+    </div>
+
     <div class="card">
         <div class="table-responsive">
             <table class="table table-vcenter card-table">
